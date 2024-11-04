@@ -23,6 +23,32 @@ The dataset consists of **100,580 rows** and **29 columns**, including attribute
 2. **Exploratory Data Analysis (EDA)**: Examined trends and patterns to extract meaningful insights.
 3. **Dashboard Development**: Developed both executive and functional dashboards using Power BI to present findings effectively.
 
+## Functional Dashboards 📊
+![Screenshot 2024-11-04 184625](https://github.com/user-attachments/assets/7eb98d08-e0e2-454b-800c-0ca0f8cdf92b)
+
+### 1. Learning Aspirations Dashboard 🎓
+
+The Learning Aspirations Dashboard offers insights into the personal development goals of individuals within the organization. It visualizes data related to preferred learning methods and areas of interest. 📈
+![Screenshot 2024-11-04 184719](https://github.com/user-attachments/assets/20276fc7-24bf-4add-8ee6-aa9672877047)
+
+---
+
+### 2. Manager Aspirations Dashboard 👩‍💼👨‍💼
+
+The Manager Aspirations Dashboard highlights the development goals and mentorship interests of managers within the organization. 🌱
+![Screenshot 2024-11-04 184742](https://github.com/user-attachments/assets/a1eb095b-9fe3-49ab-acef-755e4e73b798)
+
+---
+
+## 3. Mission Aspirations Dashboard 🚀
+
+The Mission Aspirations Dashboard showcases how individual and team goals align with the organization’s mission and vision. 🌍
+![Screenshot 2024-11-04 184803](https://github.com/user-attachments/assets/b30bade3-163d-4c1e-940c-4ebe06d9e7af)
+
+---
+
+
+
 ## Tools Used ⚙️
 - **Excel**: For data cleaning and initial analysis
 - **SQL**: For data manipulation and analysis
@@ -30,6 +56,9 @@ The dataset consists of **100,580 rows** and **29 columns**, including attribute
 - **MySQL**: For advanced data analysis
 - **Google Forms**: For data collection
 - **MS Office Suite**: For documentation and presentations
+
+## Conclusion
+This project provides comprehensive dashboards to help the organization track and analyze various aspirations. The interactive nature of these dashboards enables users to gain actionable insights and support strategic decision-making. 🏆
 
 ## Contact 📬
 For any inquiries or support, please reach out to:

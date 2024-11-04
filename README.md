@@ -25,6 +25,8 @@ The dataset consists of **100,580 rows** and **29 columns**, including attribute
 
 ## Functional Dashboards 📊
 ![Screenshot 2024-11-04 184625](https://github.com/user-attachments/assets/7eb98d08-e0e2-454b-800c-0ca0f8cdf92b)
+ 
+---
 
 ### 1. Learning Aspirations Dashboard 🎓
 

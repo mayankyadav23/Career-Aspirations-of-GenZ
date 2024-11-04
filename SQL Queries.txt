@@ -1,0 +1,141 @@
+1. What is the gender distribution of respondents from India?
+
+SELECT Gender, COUNT(*) AS Total_Respondents
+FROM genzdata
+WHERE Country = 'India'
+GROUP BY Gender;
+
+
+2. What percentage of respondents from India are interested in education abroad and sponsorship?
+
+﻿SELECT 
+    (COUNT(*) * 100.0 / (SELECT COUNT(*) ﻿FROM genzdata ﻿WHERE Country = 'India')) AS Percentage_Interested
+﻿FROM genzdata
+﻿WHERE Country = 'India' AND Study_Abroad = 'Yes';
+
+
+3. What are the 6 top influences on career aspirations for respondents in India?
+
+﻿SELECT Influence_Factors, COUNT(*) AS Total_Influence
+﻿FROM genzdata
+﻿WHERE Country = 'India'
+﻿GROUP BY Influence_Factors
+﻿ORDER BY Total_Influence DESC
+LIMIT 6;
+
+
+4. How do career aspiration influences vary by gender in India?﻿
+
+SELECT Gender, Influence_Factors, COUNT(*) AS Total_Influence
+﻿FROM genzdata
+﻿WHERE Country = 'India'
+﻿GROUP BY Gender, Influence_Factors
+﻿ORDER BY Gender, Total_Influence DESC;
+
+
+5. What percentage of respondents are willing to work for a company for at least 3 years?﻿
+
+SELECT 
+    (COUNT(*) * 100.0 / (SELECT COUNT(*) FROM genzdata)) AS Percentage_Willing
+﻿FROM genzdata
+WHERE Employer_for_3_years = 'Yes';
+
+
+6. How many respondents prefer to work for socially impactful companies?
+
+﻿﻿SELECT COUNT(*) AS Total_Prefer_Social_Impact
+﻿FROM genzdata
+﻿WHERE Work_With_Unsocial_Company = 0;
+
+
+7. How does the preference for socially impactful companies vary by gender?﻿
+
+SELECT Gender, COUNT(*) AS Total_Prefer_Social_Impact
+﻿FROM genzdata
+﻿WHERE Work_With_Unsocial_Company = 0
+﻿GROUP BY Gender;﻿
+
+
+8. What is the distribution of minimum expected salary in the first three years among respondents?
+
+﻿SELECT Expected_Monthly_Salary_for_First_3_Years, COUNT(*) AS  Respondent_Count
+﻿FROM genzdata
+﻿GROUP BY Expected_Monthly_Salary_for_First_3_Years;
+
+
+9. What is the expected minimum monthly salary in hand?
+
+﻿SELECT MIN(Expected_Monthly_Salary_for_First_3_Years) AS Min_Salary
+﻿FROM genzdata;
+
+
+10. What percentage of respondents prefer remote working?
+
+﻿SELECT 
+    (COUNT(*) * 100.0 / (SELECT COUNT(*) FROM genzdata)) AS Percentage_Remote_Workers
+﻿FROM genzdata
+﻿WHERE Fav_Working_Setup = 'Remote';
+
+
+11. What is the preferred number of daily work hours?﻿
+
+SELECT Working_Hours_EveryDay, COUNT(*) AS Total_Respondents
+﻿FROM genzdata
+﻿GROUP BY Working_Hours_EveryDay
+﻿ORDER BY COUNT(*) DESC;
+﻿
+
+12. What are the common work frustrations among respondents?﻿﻿
+
+SELECT Frustration_at_Work, COUNT(*) AS Total_Respondents
+﻿FROM genzdata
+﻿GROUP BY Frustration_at_Work
+﻿ORDER BY Total_Respondents DESC;
+
+
+13. How does the need for work-life balance interventions vary by gender?
+
+﻿SELECT Gender, COUNT(*) AS Total_Need_Balance
+﻿FROM genzdata﻿WHERE Break_To_Stay_Healthy = 'Yes'
+﻿GROUP BY Gender;
+
+
+14. How many respondents are willing to work under an abusive manager?
+
+﻿SELECT COUNT(*) AS Total_Willing
+﻿FROM genzdata﻿WHERE Likelihood_Work_With_Manager = 'Yes';
+
+
+15. What is the distribution of minimum expected salary after five years?
+
+﻿SELECT Expected_Monthly_Salary_After_5_years, COUNT(*) AS Respondent_Count
+FROM genzdata
+﻿GROUP BY Expected_Monthly_Salary_After_5_years;
+
+16. What are the remote working preferences by gender?﻿
+
+SELECT Gender, COUNT(*) AS Total_Remote_Workers
+﻿FROM genzdata
+﻿WHERE Fav_Working_Setup = 'Remote'
+﻿GROUP BY Gender;
+
+
+17. What are the top work frustrations for each gender?﻿SELECT Gender, Frustration_at_Work, COUNT(*) AS Total_Frustrations
+﻿FROM genzdata﻿GROUP BY Gender, Frustration_at_Work
+﻿ORDER BY Gender, Total_Frustrations DESC;
+
+
+18. What factors boost work happiness and productivity for respondents?
+
+﻿SELECT Happier_and_Productive_at_Work, COUNT(*) AS Total_Respondents
+﻿FROM genzdata
+﻿GROUP BY Happier_and_Productive_at_Work
+﻿ORDER BY Total_Respondents DESC;
+
+
+19. What percentage of respondents need sponsorship for education abroad?
+
+﻿SELECT 
+    (COUNT(*) * 100.0 / (SELECT COUNT(*) FROM genzdata)) AS Percentage_Need_Sponsorship
+﻿FROM genzdata
+﻿WHERE Study_Abroad = 'Yes' AND Sponsorship = 'Yes';
